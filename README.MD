@@ -5,6 +5,8 @@ tapsap
 
 Temporal analysis of products statistical analysis package (tapsap) is a package for reading, cleaning, analyzing and making inference of temporal analysis of products (TAP) information.  This package is designed with the intent for collaboration within the TAP community for advancing TAP analysis.
 
+Full documentation can be found at [tapsap](https://idaholabresearch.github.io/tapsap/).
+
 This software may be used in conjunction to other existing python TAP softwares such as TAPsolver developed by Adam Yonge of Georgia Institute of Technology [TAPsolver](https://github.com/medford-group/TAPsolver).
 
 
