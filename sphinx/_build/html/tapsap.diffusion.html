@@ -1,0 +1,355 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tapsap.diffusion package &mdash; tapsap 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tapsap.file_io package" href="tapsap.file_io.html" />
+    <link rel="prev" title="tapsap package" href="tapsap.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tapsap
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#licensing">Licensing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#developers">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">tapsap</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tapsap.html">tapsap package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tapsap.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tapsap.diffusion package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.file_io.html">tapsap.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.moments_analysis.html">tapsap.moments_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.plot.html">tapsap.plot package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.preprocess.html">tapsap.preprocess package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.structures.html">tapsap.structures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tapsolver.html">tapsap.tapsolver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tests.html">tapsap.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.transient_analysis.html">tapsap.transient_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.utils.html">tapsap.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tapsap.html#module-tapsap">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tapsap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">tapsap</a> &raquo;</li>
+        
+          <li><a href="tapsap.html">tapsap package</a> &raquo;</li>
+        
+      <li>tapsap.diffusion package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tapsap.diffusion.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tapsap-diffusion-package">
+<h1>tapsap.diffusion package<a class="headerlink" href="#tapsap-diffusion-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tapsap.diffusion.calculate_residence_time">
+<span id="tapsap-diffusion-calculate-residence-time-module"></span><h2>tapsap.diffusion.calculate_residence_time module<a class="headerlink" href="#module-tapsap.diffusion.calculate_residence_time" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.diffusion.calculate_residence_time.calculate_residence_time">
+<span class="sig-prename descclassname"><span class="pre">tapsap.diffusion.calculate_residence_time.</span></span><span class="sig-name descname"><span class="pre">calculate_residence_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">zone_lengths</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_porosity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_diffusion</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.diffusion.calculate_residence_time.calculate_residence_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the residence time within the each zone in the reactor.
+Please note that some manuscripts either invert the residence time or scale by a factor of one half.
+This residence time calculation is done via Constales et al.
+See other citations to note the difference in implementation.</p>
+<dl>
+<dt>Args:</dt><dd><p>zone_lengths (dict): The zone lengths for the reactor, e.g., {0.002, 0.000001, 0.002}</p>
+<p>zone_diffusion (dict): The diffusion coefficient for each zone</p>
+<p>zone_porosity (dict): The bed porosity within each zone</p>
+</dd>
+<dt>Returns:</dt><dd><p>zone_residence_time (dict): The residence time within each zone</p>
+</dd>
+<dt>Citation:</dt><dd><p>Constales et al, “Precises non-steady-state characterization of solid active materials with no prelimnary mechanistic assumptions”</p>
+<p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+<p>Yablonsky et al, “The Y-procedure: How to extract the chemical transformation rate from reaction–diffusion data with no assumption on the kinetic model”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/j.cattod.2017.04.036">https://doi.org/10.1016/j.cattod.2017.04.036</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2007.04.050">https://doi.org/10.1016/j.ces.2007.04.050</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.diffusion.grahams_law">
+<span id="tapsap-diffusion-grahams-law-module"></span><h2>tapsap.diffusion.grahams_law module<a class="headerlink" href="#module-tapsap.diffusion.grahams_law" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.diffusion.grahams_law.grahams_law">
+<span class="sig-prename descclassname"><span class="pre">tapsap.diffusion.grahams_law.</span></span><span class="sig-name descname"><span class="pre">grahams_law</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#tapsap.diffusion.grahams_law.grahams_law" title="Permalink to this definition">¶</a></dt>
+<dd><p>This function uses linear interpolation to shift the flux to appear to be another mass.
+This uses the property of Graham’s law of diffusion where the rate of diffusion is proportional to the square root ratio of masses.</p>
+<dl>
+<dt>Args:</dt><dd><p>flux (float ndarray): The outlet flux.</p>
+<p>times (float ndarray): An array of time.</p>
+<p>current_mass (float): The current mass of the given flux.</p>
+<p>new_mass (float): The mass in which you are transforming the flux to have the same diffusion.</p>
+</dd>
+<dt>Returns:</dt><dd><p>flux (array): The outlet flux after application of Graham’s law.</p>
+</dd>
+<dt>Citation:</dt><dd><p>None</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.utils.trapz</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Graham%27s_law">https://en.wikipedia.org/wiki/Graham%27s_law</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.diffusion.opt_sdc">
+<span id="tapsap-diffusion-opt-sdc-module"></span><h2>tapsap.diffusion.opt_sdc module<a class="headerlink" href="#module-tapsap.diffusion.opt_sdc" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.diffusion.opt_sdc.opt_sdc">
+<span class="sig-prename descclassname"><span class="pre">tapsap.diffusion.opt_sdc.</span></span><span class="sig-name descname"><span class="pre">opt_sdc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">residence_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#tapsap.diffusion.opt_sdc.opt_sdc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Optimization of the residence time for the standard diffusion curve.</p>
+<dl>
+<dt>Args:</dt><dd><p>residence_time (float): The initial estimates of the residence time, see calculate_residence_time.</p>
+<p>flux (float ndarray): The outlet flux.</p>
+<p>times (float ndarray): An array of time</p>
+</dd>
+<dt>Returns:</dt><dd><p>optimized_sdc, residence_time (list): The standard diffusion curve of the flux and the optimized residence time.</p>
+</dd>
+<dt>Citation:</dt><dd><p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.diffusion.standard_diffusion_curve">
+<span id="tapsap-diffusion-standard-diffusion-curve-module"></span><h2>tapsap.diffusion.standard_diffusion_curve module<a class="headerlink" href="#module-tapsap.diffusion.standard_diffusion_curve" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.diffusion.standard_diffusion_curve.standard_diffusion_curve">
+<span class="sig-prename descclassname"><span class="pre">tapsap.diffusion.standard_diffusion_curve.</span></span><span class="sig-name descname"><span class="pre">standard_diffusion_curve</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">residence_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#tapsap.diffusion.standard_diffusion_curve.standard_diffusion_curve" title="Permalink to this definition">¶</a></dt>
+<dd><p>The standard diffusion curve representing the transport within the TAP reactor.</p>
+<dl>
+<dt>Args:</dt><dd><p>residence_time (dict): The residence time, see calculate_residence_time</p>
+<p>times (float ndarray): An array of time</p>
+</dd>
+<dt>Returns:</dt><dd><p>flux (array): The outlet flux of the standard diffusion curve</p>
+</dd>
+<dt>Citation:</dt><dd><p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.diffusion">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tapsap.diffusion" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tapsap.file_io.html" class="btn btn-neutral float-right" title="tapsap.file_io package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tapsap.html" class="btn btn-neutral float-left" title="tapsap package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, M. Ross Kunz.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

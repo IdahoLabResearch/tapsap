@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tapsap.structures package &mdash; tapsap 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tapsap.tapsolver package" href="tapsap.tapsolver.html" />
+    <link rel="prev" title="tapsap.preprocess package" href="tapsap.preprocess.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tapsap
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#licensing">Licensing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#developers">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">tapsap</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tapsap.html">tapsap package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tapsap.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tapsap.diffusion.html">tapsap.diffusion package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.file_io.html">tapsap.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.moments_analysis.html">tapsap.moments_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.plot.html">tapsap.plot package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.preprocess.html">tapsap.preprocess package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tapsap.structures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tapsolver.html">tapsap.tapsolver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tests.html">tapsap.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.transient_analysis.html">tapsap.transient_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.utils.html">tapsap.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tapsap.html#module-tapsap">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tapsap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">tapsap</a> &raquo;</li>
+        
+          <li><a href="tapsap.html">tapsap package</a> &raquo;</li>
+        
+      <li>tapsap.structures package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tapsap.structures.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tapsap-structures-package">
+<h1>tapsap.structures package<a class="headerlink" href="#tapsap-structures-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tapsap.structures.Experiment">
+<span id="tapsap-structures-experiment-module"></span><h2>tapsap.structures.Experiment module<a class="headerlink" href="#module-tapsap.structures.Experiment" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">tapsap.structures.Experiment.</span></span><span class="sig-name descname"><span class="pre">Experiment</span></span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains all of the experiment information.
+It mainly acts as a container for all of the species data / methods as well as a container for meta data.</p>
+<dl>
+<dt>Attributes:</dt><dd><p>file_name (str): The name of the read file or experiment.</p>
+<p>collection_time (str): The collection time of the experiment.</p>
+<p>pulse_spacing (float): The pulse spacing within the experiment.</p>
+<p>time_start (float): The start time of each flux.</p>
+<p>time_end (float): The end time of the experiment.</p>
+<p>num_samples_per_pulse (int): The number of samples per pulse.</p>
+<p>species_data (dict): A collection of Transient objects.</p>
+<p>reactor (class Reactor): The reactor information.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment.make_copy">
+<span class="sig-name descname"><span class="pre">make_copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name_to_copy</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_species_name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.make_copy" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method makes a deep copy of a species such that it may be transformed without removing the original flux.</p>
+<dl>
+<dt>Args:</dt><dd><p>name_to_copy (str): A name contained in the species_data attribute</p>
+<p>new_species_name (str): The new name of the copy.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment.remove_delay_time">
+<span class="sig-name descname"><span class="pre">remove_delay_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.remove_delay_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes the delay time ranges from all gas species. This may need to be done if the experiment delays a pulse to determine the baseline at the front of the flux.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment.set_reactor_params">
+<span class="sig-name descname"><span class="pre">set_reactor_params</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.set_reactor_params" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets the reactor parameters for each species in species_data based on the experiments reactor information.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment.set_reference_gas">
+<span class="sig-name descname"><span class="pre">set_reference_gas</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inert_species</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.set_reference_gas" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method sets the reference gas for all species in species_data</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>inert_species (str): The name of the inert species.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.structures.Reactor">
+<span id="tapsap-structures-reactor-module"></span><h2>tapsap.structures.Reactor module<a class="headerlink" href="#module-tapsap.structures.Reactor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tapsap.structures.Reactor.Reactor">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">tapsap.structures.Reactor.</span></span><span class="sig-name descname"><span class="pre">Reactor</span></span><a class="headerlink" href="#tapsap.structures.Reactor.Reactor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class acts as a container for all of the reactor parameters.</p>
+<dl>
+<dt>Attributes:</dt><dd><p>zone_lengths (dict): The zone lengths for the reactor.</p>
+<p>zone_porosity (dict): The bed porosity within each zone.</p>
+<p>zone_diffusion (dict): The diffusion coefficient for each zone.</p>
+<p>zone_residence_time (dict): The residence time within each zone.</p>
+<p>reactor_radius (float): The radius of the reactor.</p>
+<p>catalyst_weight (float): The catalyst weight.</p>
+<p>mol_per_pulse (float): The mol per pulse.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.structures.Transient">
+<span id="tapsap-structures-transient-module"></span><h2>tapsap.structures.Transient module<a class="headerlink" href="#module-tapsap.structures.Transient" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">tapsap.structures.Transient.</span></span><span class="sig-name descname"><span class="pre">Transient</span></span><a class="headerlink" href="#tapsap.structures.Transient.Transient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains all of the transient information per pulse for a single gas species.
+Most of the computation for preprocessing and transformations should take place in this class.</p>
+<dl>
+<dt>Attributes:</dt><dd><p>name (str): The name of the gas species.</p>
+<p>pulse_id (str): The pulse index for the parent gas species.</p>
+<p>mass (float): The mass of the gas species.</p>
+<p>gain (float): The gain of the mass spectrometer for measuring the gas species.</p>
+<p>delay_time (float): The delay time of the gas species.</p>
+<p>flux (dataframe): The measured flux of the gas species.</p>
+<p>times (float ndarray): An array of time.</p>
+<p>amount_pulsed (float): The amount pulsed for each pulse.</p>
+<p>initial_concentration (float): The initial concentration within the reaction.</p>
+<p>num_pulse (int): The number of pulses injected.</p>
+<p>df_moments (dataframe): A dataframe containing all of the summary information of the experiment.</p>
+<p>reactor (Reactor): A Reactor class containing all of the reactor information.</p>
+<p>reference_gas (Transient): The reference flux (inert flux) when measuring kinetic information.</p>
+<p>integration_times (list): The integration times for the moments.</p>
+<p>num_cores (int): The total number of cores to use in processing the data.  Initially set to the total number of cores available - 1.</p>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.baseline_correct">
+<span class="sig-name descname"><span class="pre">baseline_correct</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">baseline_time_range</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">baseline_amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.baseline_correct" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for traditional baseline correction by either a baseline amount or baseline time range.
+If baseline_time_range and baseline_amount is None, then the baseline_gamma will be used.</p>
+<dl>
+<dt>Args:</dt><dd><p>baseline_time_range (float list): The points in time in which to take the baseline.</p>
+<p>baseline_amount (float): The amount of baseline correction to apply.</p>
+<p>smooth_flux (bool): Smoothing the flux prior to optimization.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.preprocess.baseline_correction</p>
+<p>tapsap.preprocess.baseline_gamma</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.calibrate_flux">
+<span class="sig-name descname"><span class="pre">calibrate_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">huber_loss</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.calibrate_flux" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for applying a calibration coefficient to the flux (multiplied).
+This method has the option to do traditional calibration via a calibration amount or if None, then will perform transient calibration.
+When the reference_index is not None, then this will loop over all flux and calibrate to a specific flux. 
+The reference flux is usefull when accounting for drift in the inert flux.</p>
+<dl>
+<dt>Args:</dt><dd><p>calibration_amount (float): The amount to scale the flux.</p>
+<p>reference_index (int): The index in which to calibrate all other flux.</p>
+<p>smooth_flux (bool): Smoothing the flux prior to optimization.</p>
+<p>huber_loss (bool): Use a robust loss function rather than the standard square error loss.</p>
+<p>constraints (bool): This controls whether contrained regression is performed.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.preprocess.calibration_coef</p>
+<p>tapsap.preprocess.tap_mix</p>
+<p>tapsap.preprocess.calibration_teak</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.grahams_law">
+<span class="sig-name descname"><span class="pre">grahams_law</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">new_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.grahams_law" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies grahams_law to each flux.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>new_mass (float): The mass to scale the flux to.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.diffusion.grahams_law</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.remove_delay_time">
+<span class="sig-name descname"><span class="pre">remove_delay_time</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.remove_delay_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method removes the delay time ranges from the flux. This may need to be done if the experiment delays a pulse to determine the baseline at the front of the flux.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_concentration">
+<span class="sig-name descname"><span class="pre">set_concentration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_smoothing</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_concentration" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method calculates the gas concentration from the available flux.
+Note that by doing this method, the original flux will be overwritten.
+It is preferable to make a deepcopy of the original species information where the concentration will another object.
+If y_smoothing is left as None, then G-Procedure is used.</p>
+<dl>
+<dt>Args:</dt><dd><p>y_smoothing (float): This value controls the amount of smoothing placed on the gas concentration when the Y-Procedure is used.  If None, then the G-Procedure is used.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.transient_analysis.concentration_g</p>
+<p>tapsap.transient_analysis.concentration_y</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_gas_diffusion">
+<span class="sig-name descname"><span class="pre">set_gas_diffusion</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_gas_diffusion" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for setting the gas diffusion based on the inert or reference flux diffusion.
+This method requires a reference gas and that the moments have been calculated.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_min_mean_max">
+<span class="sig-name descname"><span class="pre">set_min_mean_max</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_min_mean_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for setting the summary information (min, mean, max) for each flux.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_moments">
+<span class="sig-name descname"><span class="pre">set_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">smooth_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">find_integration_times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_moments" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for setting the moments.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>smooth_flux (bool): Smoothing the flux prior to optimization.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.moments</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_rate">
+<span class="sig-name descname"><span class="pre">set_rate</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">y_smoothing</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">isreactant</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method calculates the rate from the available flux.
+Note that by doing this method, the original flux will be overwritten.
+It is preferable to make a deepcopy of the original species information where the rate will another object.
+If y_smoothing is left as None, then G-Procedure is used.</p>
+<dl>
+<dt>Args:</dt><dd><p>y_smoothing (float): This value controls the amount of smoothing placed on the gas concentration when the Y-Procedure is used.  If None, then the G-Procedure is used.</p>
+<p>isreactant (bool): This controls whether the difference between the inert and the reactant is used when measuring the rate.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.transient_analysis.rate_g</p>
+<p>tapsap.transient_analysis.rate_y</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_reactivities">
+<span class="sig-name descname"><span class="pre">set_reactivities</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reactant_obj</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_reactivities" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for setting the reactivites.
+The method requires that the reference_gas be set to the inert species using moments_analysis.diffusion_moments.</p>
+<dl>
+<dt>Args:</dt><dd><p>reactant_obj (Transient): If none, then it is assumed that the gas species is a reactant.  If used, then the gas species is a product and the additional moments are the reactant moments.</p>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.diffusion_moments</p>
+<p>tapsap.moments_analysis.reactivities_product</p>
+<p>tapsap.moments_analysis.reactivities_reactant</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.set_rtd_parameters">
+<span class="sig-name descname"><span class="pre">set_rtd_parameters</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.set_rtd_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>A method for setting the residence time distribution parameters.
+This requires calculating the moments.</p>
+<dl class="simple">
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.rtd_parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.smooth_flux">
+<span class="sig-name descname"><span class="pre">smooth_flux</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.smooth_flux" title="Permalink to this definition">¶</a></dt>
+<dd><p>This method applies smooth_flux_gam to each flux.</p>
+<dl class="simple">
+<dt>See also:</dt><dd><p>tapsap.transient_analysis.smooth_flux_gam</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.structures">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tapsap.structures" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tapsap.tapsolver.html" class="btn btn-neutral float-right" title="tapsap.tapsolver package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tapsap.preprocess.html" class="btn btn-neutral float-left" title="tapsap.preprocess package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, M. Ross Kunz.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

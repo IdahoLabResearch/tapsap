@@ -1,0 +1,491 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tapsap.moments_analysis package &mdash; tapsap 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="tapsap.plot package" href="tapsap.plot.html" />
+    <link rel="prev" title="tapsap.file_io package" href="tapsap.file_io.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tapsap
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#licensing">Licensing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#developers">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">tapsap</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tapsap.html">tapsap package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tapsap.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tapsap.diffusion.html">tapsap.diffusion package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.file_io.html">tapsap.file_io package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tapsap.moments_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.plot.html">tapsap.plot package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.preprocess.html">tapsap.preprocess package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.structures.html">tapsap.structures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tapsolver.html">tapsap.tapsolver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tests.html">tapsap.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.transient_analysis.html">tapsap.transient_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.utils.html">tapsap.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tapsap.html#module-tapsap">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tapsap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">tapsap</a> &raquo;</li>
+        
+          <li><a href="tapsap.html">tapsap package</a> &raquo;</li>
+        
+      <li>tapsap.moments_analysis package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tapsap.moments_analysis.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tapsap-moments-analysis-package">
+<h1>tapsap.moments_analysis package<a class="headerlink" href="#tapsap-moments-analysis-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tapsap.moments_analysis.active_sites_by_pulse">
+<span id="tapsap-moments-analysis-active-sites-by-pulse-module"></span><h2>tapsap.moments_analysis.active_sites_by_pulse module<a class="headerlink" href="#module-tapsap.moments_analysis.active_sites_by_pulse" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.active_sites_by_pulse.active_sites_by_pulse">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.active_sites_by_pulse.</span></span><span class="sig-name descname"><span class="pre">active_sites_by_pulse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux_M0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inert_M0</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stoichiometric_coef</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">first_order</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">huber_loss</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.active_sites_by_pulse.active_sites_by_pulse" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for determining the diffusion coefficient from the moments of the flux.
+Note that this method only works for an irreversible process.</p>
+<dl>
+<dt>Args:</dt><dd><p>flux_M0 (ndarray): An array of M0 values based on the flux.</p>
+<p>inert_M0 (ndarray): An array of M0 values based on the inert/reference flux.</p>
+<p>stoichiometric_coef (float): The stoichimetric coefficient of the gas species.</p>
+<p>first_order (float): If the reaction is first ordered.  If False, then the reaction will be assumed to be second order.</p>
+<p>huber_loss (bool): Use a robust loss function rather than the standard square error loss.</p>
+</dd>
+<dt>Returns:</dt><dd><p>fitted, active_sites (dict): The fitted values by pulse number and the active sites.</p>
+</dd>
+<dt>Citation:</dt><dd><p>Constales et al, “Methods for determining the intrinsic kinetic characteristics of irreversible adsorption processes.”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.moments</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/j.ces.2019.06.026">https://doi.org/10.1016/j.ces.2019.06.026</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.diffusion_moments">
+<span id="tapsap-moments-analysis-diffusion-moments-module"></span><h2>tapsap.moments_analysis.diffusion_moments module<a class="headerlink" href="#module-tapsap.moments_analysis.diffusion_moments" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.diffusion_moments.diffusion_moments">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.diffusion_moments.</span></span><span class="sig-name descname"><span class="pre">diffusion_moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_lengths</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_porosity</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">current_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">new_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.diffusion_moments.diffusion_moments" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for determining the diffusion coefficient from the moments of the flux.</p>
+<dl>
+<dt>Args:</dt><dd><p>moments (dict | dataframe): The moments of the flux</p>
+<p>zone_lengths (dict): The zone lengths for the reactor, e.g., {0.002, 0.000001, 0.002}</p>
+<p>zone_porosity (dict): The bed porosity within each zone</p>
+<p>current_mass (float): The current mass of the given flux.</p>
+<p>new_mass (float): The mass in which you are transforming the flux to have the same diffusion (typically the inert mass).</p>
+</dd>
+<dt>Returns:</dt><dd><p>diffusion (dict): The diffusion coefficients per pulse.</p>
+</dd>
+<dt>Citation:</dt><dd><p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.moments</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.isreversible">
+<span id="tapsap-moments-analysis-isreversible-module"></span><h2>tapsap.moments_analysis.isreversible module<a class="headerlink" href="#module-tapsap.moments_analysis.isreversible" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.isreversible.isreversible">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.isreversible.</span></span><span class="sig-name descname"><span class="pre">isreversible</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inert_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">flux_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inert_mass</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.moments_analysis.isreversible.isreversible" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check to see if the flux is reversible when compared to the inert flux.
+This requires first that the inert flux be transformed to the same mass as the flux through Graham’s law.
+Afterwhich, the normalized first moment of the flux is compared to the inert to determine reversibility.
+If M1_flux &lt; M1_inert, then irreversible.</p>
+<dl>
+<dt>Args:</dt><dd><p>flux (float ndarray): The outlet flux.</p>
+<p>times (float ndarray): An array of time.</p>
+<p>inert_flux (float ndarray): The outlet flux of the inert.</p>
+<p>flux_mass (float): The mass of the flux.</p>
+<p>inert_mass (float): The mass of the inert flux.</p>
+</dd>
+<dt>Returns:</dt><dd><p>isreversible (bool): Determine if the outlet flux is reversible.</p>
+</dd>
+<dt>Citation:</dt><dd><p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+<p>TODO TEAK</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.diffusion.grahams_law</p>
+<p>tapsap.moments_analysis.moments</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+<p>TODO TEAK</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.min_mean_max">
+<span id="tapsap-moments-analysis-min-mean-max-module"></span><h2>tapsap.moments_analysis.min_mean_max module<a class="headerlink" href="#module-tapsap.moments_analysis.min_mean_max" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.min_mean_max.min_mean_max">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.min_mean_max.</span></span><span class="sig-name descname"><span class="pre">min_mean_max</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.min_mean_max.min_mean_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of the min, mean and max of the flux.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>flux (ndarray | DataFrame): The outlet flux.</p>
+</dd>
+<dt>Returns:</dt><dd><p>min_mean_max (dict): The min mean and max of a flux.</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.moments">
+<span id="tapsap-moments-analysis-moments-module"></span><h2>tapsap.moments_analysis.moments module<a class="headerlink" href="#module-tapsap.moments_analysis.moments" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.moments.moments">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.moments.</span></span><span class="sig-name descname"><span class="pre">moments</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">integration_time_range</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">list</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.moments.moments" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of the moments using the trapezoidal rule</p>
+<dl>
+<dt>Args:</dt><dd><p>flux (float ndarray | dataframe): The outlet flux.</p>
+<p>times (float ndarray): An array of time.</p>
+<p>integration_time_range (ints list, optional): A list contianing the start and end time to integrate the flux. If None, then set to the min and max time.</p>
+</dd>
+<dt>Returns:</dt><dd><p>moments (dict): The moments of the flux</p>
+</dd>
+<dt>Citation:</dt><dd><p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+<p>Constales et al, “Multi-zone TAP-reactors theory and application: I. The global transfer matrix equation”</p>
+<p>Constales et al, “Multi-zone TAP-reactors theory and application: II. The three-dimensional theory”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.utils.trapz</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/S0009-2509(00)00216-5">https://doi.org/10.1016/S0009-2509(00)00216-5</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/S0009-2509(00)00217-7">https://doi.org/10.1016/S0009-2509(00)00217-7</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.reactivities_product">
+<span id="tapsap-moments-analysis-reactivities-product-module"></span><h2>tapsap.moments_analysis.reactivities_product module<a class="headerlink" href="#module-tapsap.moments_analysis.reactivities_product" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.reactivities_product.reactivities_product">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.reactivities_product.</span></span><span class="sig-name descname"><span class="pre">reactivities_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">product_moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reactant_moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inert_moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reactant_reactivities</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_residence_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">diffusions</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.reactivities_product.reactivities_product" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reactivities calculations for a product gas
+Zeroth reactivity is the apparent rate constant.
+First reactivity is the apparent gas uptake-release coefficient.
+Second reactivity is the delay caused by storage on the catalyst.</p>
+<dl>
+<dt>Args:</dt><dd><p>product_moments (dict | dataframe): A dict of the zeroth, first and second moment of the product.</p>
+<p>inert_moments (dict | dataframe): A dict of the zeroth, first and second moment of the inert.</p>
+<p>reactant_moments (dict | dataframe): A dict of the zeroth, first and second moment of the reactant.</p>
+<p>reactant_reactivities (dict | dataframe): A dict of the zeroth, first and second reactivity coefficients of the reactant.</p>
+<p>diffusions (list): A list of the diffusion coefficients for each gas: [inert_diffusion, reactant_diffusion, product_diffusion].</p>
+<p>zone_residence_time (dict): Residence times for each zone of the reactor.</p>
+</dd>
+<dt>Returns:</dt><dd><p>product_reactivities (dict): The zeroth, first and second reactivities of the product.</p>
+</dd>
+<dt>Cite:</dt><dd><p>Constales et al “Precises non-steady-state characterization of solid active materials with no prelimnary mechanistic assumptions”</p>
+<p>Shekhtman et al “‘State defining’ experiment in chemical kinetics primary characterization of catalyst activity in a TAP experiment”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.moments</p>
+<p>tapsap.diffusion.calculate_residence_time</p>
+<p>tapsap.diffusion.calculate_zone_diffusion</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/j.cattod.2017.04.036">https://doi.org/10.1016/j.cattod.2017.04.036</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2003.08.005">https://doi.org/10.1016/j.ces.2003.08.005</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.reactivities_reactant">
+<span id="tapsap-moments-analysis-reactivities-reactant-module"></span><h2>tapsap.moments_analysis.reactivities_reactant module<a class="headerlink" href="#module-tapsap.moments_analysis.reactivities_reactant" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.reactivities_reactant.reactivities_reactant">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.reactivities_reactant.</span></span><span class="sig-name descname"><span class="pre">reactivities_reactant</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">reactant_moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">inert_moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">zone_residence_time</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.reactivities_reactant.reactivities_reactant" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reactivities calculations for a reactant gas.
+Zeroth reactivity is the apparent rate constant.
+First reactivity is the apparent gas uptake-release coefficient.
+Second reactivity is the delay caused by storage on the catalyst.</p>
+<dl>
+<dt>Args:</dt><dd><p>reactant_moments (dict | dataframe): A dictionary of the zeroth, first and second moment of the reactant.</p>
+<p>inert_moments (dict | dataframe): A dictionary of the zeroth, first and second moment of the inert.</p>
+<p>zone_residence_time (dict): Residence times for each zone of the reactor.</p>
+</dd>
+<dt>Returns:</dt><dd><p>reactant_reactivities (dict): The reactivity coefficients of the reactant.</p>
+</dd>
+<dt>Citation:</dt><dd><p>Constales et al “Precises non-steady-state characterization of solid active materials with no prelimnary mechanistic assumptions”</p>
+<p>Shekhtman et al “‘State defining’ experiment in chemical kinetics primary characterization of catalyst activity in a TAP experiment”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.moments</p>
+<p>tapsap.diffusion.calculate_residence_time</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/j.cattod.2017.04.036">https://doi.org/10.1016/j.cattod.2017.04.036</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/j.ces.2003.08.005">https://doi.org/10.1016/j.ces.2003.08.005</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis.rtd_parameters">
+<span id="tapsap-moments-analysis-rtd-parameters-module"></span><h2>tapsap.moments_analysis.rtd_parameters module<a class="headerlink" href="#module-tapsap.moments_analysis.rtd_parameters" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.moments_analysis.rtd_parameters.rtd_parameters">
+<span class="sig-prename descclassname"><span class="pre">tapsap.moments_analysis.rtd_parameters.</span></span><span class="sig-name descname"><span class="pre">rtd_parameters</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">moments</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">dict</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">dict</span><a class="headerlink" href="#tapsap.moments_analysis.rtd_parameters.rtd_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculation of the residence time distribution parameters using the moments.
+This includes the shape and scale estimates assuming a Gamma distribution.</p>
+<dl>
+<dt>Args:</dt><dd><p>moments (dict | DataFrame): The integral of the flux</p>
+</dd>
+<dt>Returns:</dt><dd><p>rtd_parameters (dict): The mean residence time, variance residence time, gamma shape parameter, and gamma scale parameter</p>
+</dd>
+<dt>Citation:</dt><dd><p>Gleaves et al, “TAP-2: An interrogative kinetics approach”</p>
+<p>Constales et al, “Multi-zone TAP-reactors theory and application: I. The global transfer matrix equation”</p>
+<p>Constales et al, “Multi-zone TAP-reactors theory and application: II. The three-dimensional theory”</p>
+<p>Casella et al, “Statistical Inference”</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>See also:</dt><dd><p>tapsap.moments_analysis.moments</p>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://doi.org/10.1016/S0926-860X(97)00124-5">https://doi.org/10.1016/S0926-860X(97)00124-5</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/S0009-2509(00)00216-5">https://doi.org/10.1016/S0009-2509(00)00216-5</a></p>
+<p><a class="reference external" href="https://doi.org/10.1016/S0009-2509(00)00217-7">https://doi.org/10.1016/S0009-2509(00)00217-7</a></p>
+<p><a class="reference external" href="https://en.wikipedia.org/wiki/Gamma_distribution">https://en.wikipedia.org/wiki/Gamma_distribution</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.moments_analysis">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tapsap.moments_analysis" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tapsap.plot.html" class="btn btn-neutral float-right" title="tapsap.plot package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="tapsap.file_io.html" class="btn btn-neutral float-left" title="tapsap.file_io package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, M. Ross Kunz.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

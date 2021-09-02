@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>tapsap.utils package &mdash; tapsap 1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="tapsap.transient_analysis package" href="tapsap.transient_analysis.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> tapsap
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="README.html">README</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#licensing">Licensing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="README.html#developers">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Examples.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">tapsap</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="tapsap.html">tapsap package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="tapsap.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="tapsap.diffusion.html">tapsap.diffusion package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.file_io.html">tapsap.file_io package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.moments_analysis.html">tapsap.moments_analysis package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.plot.html">tapsap.plot package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.preprocess.html">tapsap.preprocess package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.structures.html">tapsap.structures package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tapsolver.html">tapsap.tapsolver package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.tests.html">tapsap.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tapsap.transient_analysis.html">tapsap.transient_analysis package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">tapsap.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="tapsap.html#module-tapsap">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">tapsap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">tapsap</a> &raquo;</li>
+        
+          <li><a href="tapsap.html">tapsap package</a> &raquo;</li>
+        
+      <li>tapsap.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/tapsap.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tapsap-utils-package">
+<h1>tapsap.utils package<a class="headerlink" href="#tapsap-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-tapsap.utils.filter_xl">
+<span id="tapsap-utils-filter-xl-module"></span><h2>tapsap.utils.filter_xl module<a class="headerlink" href="#module-tapsap.utils.filter_xl" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.filter_xl.filter_xl">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.filter_xl.</span></span><span class="sig-name descname"><span class="pre">filter_xl</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.utils.filter_xl.filter_xl" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for filtering a value that is coming in from an excel file.
+For example, if the input is a float, but read as a string, then the result in a class should be float.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>variable (str): A variable to test the type of value.</p>
+</dd>
+<dt>Returns:</dt><dd><p>result (any): The result of the string filter from xlsx.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.find_integration_time">
+<span id="tapsap-utils-find-integration-time-module"></span><h2>tapsap.utils.find_integration_time module<a class="headerlink" href="#module-tapsap.utils.find_integration_time" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.find_integration_time.find_integration_time">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.find_integration_time.</span></span><span class="sig-name descname"><span class="pre">find_integration_time</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">min_value</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">list</span><a class="headerlink" href="#tapsap.utils.find_integration_time.find_integration_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find the integration time based on the support (non-negative values assuming a distribution of the molecules).</p>
+<dl>
+<dt>Args:</dt><dd><p>flux (float ndarray): The outlet flux.</p>
+<p>times (float ndarray): An array of time.</p>
+<p>min_value (float): The minimal value allowed for the flux.</p>
+</dd>
+<dt>Returns:</dt><dd><p>integration_time_range (list): A list contianing the start and end time to integrate the flux. If None, then set to the min and max time.</p>
+</dd>
+<dt>Citation:</dt><dd><p>TODO TEAK</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+<p>TODO TEAK</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.gamma_pdf">
+<span id="tapsap-utils-gamma-pdf-module"></span><h2>tapsap.utils.gamma_pdf module<a class="headerlink" href="#module-tapsap.utils.gamma_pdf" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.gamma_pdf.gamma_pdf">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.gamma_pdf.</span></span><span class="sig-name descname"><span class="pre">gamma_pdf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">shape</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scale</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">numpy.ndarray</span><a class="headerlink" href="#tapsap.utils.gamma_pdf.gamma_pdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generates the gamma distribution Probability Density Function (PDF) based on the given times, shape and scale (note that the rate is equal to 1/scale).</p>
+<dl>
+<dt>Args:</dt><dd><p>times (float ndarray): An array of time.</p>
+<p>shape (float): The shape parameter of the gamma distribution.</p>
+<p>scale (float): The scale parameter of the gamma distribution.</p>
+</dd>
+<dt>Returns:</dt><dd><p>pdf (float ndarray): The PDF of the generated gamma distribution.</p>
+</dd>
+<dt>Citation:</dt><dd><p>Casella &amp; Berger, Statistical Inference.</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Gamma_distribution">https://en.wikipedia.org/wiki/Gamma_distribution</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.isfloat">
+<span id="tapsap-utils-isfloat-module"></span><h2>tapsap.utils.isfloat module<a class="headerlink" href="#module-tapsap.utils.isfloat" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.isfloat.isfloat">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.isfloat.</span></span><span class="sig-name descname"><span class="pre">isfloat</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.utils.isfloat.isfloat" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for determining if a value float.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>variable: A variable to test if it is a float.</p>
+</dd>
+<dt>Returns:</dt><dd><p>isfloat (bool): A true false statement if the value is a float.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.isint">
+<span id="tapsap-utils-isint-module"></span><h2>tapsap.utils.isint module<a class="headerlink" href="#module-tapsap.utils.isint" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.isint.isint">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.isint.</span></span><span class="sig-name descname"><span class="pre">isint</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.utils.isint.isint" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for determining if a value int.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>variable: A variable to test if it is a int.</p>
+</dd>
+<dt>Returns:</dt><dd><p>isint (bool): A true false statement if the value is a int.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.isjson">
+<span id="tapsap-utils-isjson-module"></span><h2>tapsap.utils.isjson module<a class="headerlink" href="#module-tapsap.utils.isjson" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.isjson.isjson">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.isjson.</span></span><span class="sig-name descname"><span class="pre">isjson</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.utils.isjson.isjson" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for determining if a value is a json object.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>variable: A variable to test if it is a json object.</p>
+</dd>
+<dt>Returns:</dt><dd><p>isjson (bool): A true false statement if the value is a json object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.islist">
+<span id="tapsap-utils-islist-module"></span><h2>tapsap.utils.islist module<a class="headerlink" href="#module-tapsap.utils.islist" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.islist.islist">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.islist.</span></span><span class="sig-name descname"><span class="pre">islist</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">variable</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.utils.islist.islist" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for determining if a value includes brackets ‘[‘.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>variable: A variable to test if it is a list.</p>
+</dd>
+<dt>Returns:</dt><dd><p>islist (bool): A true false statement if the value is a list.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.mad">
+<span id="tapsap-utils-mad-module"></span><h2>tapsap.utils.mad module<a class="headerlink" href="#module-tapsap.utils.mad" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.mad.mad">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.mad.</span></span><span class="sig-name descname"><span class="pre">mad</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">bool</span><a class="headerlink" href="#tapsap.utils.mad.mad" title="Permalink to this definition">¶</a></dt>
+<dd><p>The median absolute deviation MAD of a ndarray.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><p>x (ndarray): A numpy array.</p>
+</dd>
+<dt>Returns:</dt><dd><p>mad (float): the median absolute deviation of x.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.rmse">
+<span id="tapsap-utils-rmse-module"></span><h2>tapsap.utils.rmse module<a class="headerlink" href="#module-tapsap.utils.rmse" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.rmse.rmse">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.rmse.</span></span><span class="sig-name descname"><span class="pre">rmse</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">y</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">float</span><a class="headerlink" href="#tapsap.utils.rmse.rmse" title="Permalink to this definition">¶</a></dt>
+<dd><p>A function for the root mean square error between two arrays.</p>
+<dl>
+<dt>Args:</dt><dd><p>x (ndarray): An array of values.</p>
+<p>y (ndarray): An array of values.</p>
+</dd>
+<dt>Returns:</dt><dd><p>rmse_error (float): The root mean square error between x and y.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils.trapz">
+<span id="tapsap-utils-trapz-module"></span><h2>tapsap.utils.trapz module<a class="headerlink" href="#module-tapsap.utils.trapz" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="tapsap.utils.trapz.trapz">
+<span class="sig-prename descclassname"><span class="pre">tapsap.utils.trapz.</span></span><span class="sig-name descname"><span class="pre">trapz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">times</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">numpy.ndarray</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">float</span><a class="headerlink" href="#tapsap.utils.trapz.trapz" title="Permalink to this definition">¶</a></dt>
+<dd><p>Trapazoidal integration or integration by sum.  
+Times can either be a vector of time with the same length as the flux 
+or it can be the difference in time for each measurement point.</p>
+<dl>
+<dt>Args:</dt><dd><p>flux (float ndarray): The outlet flux.</p>
+<p>times (float ndarray): An array of time.</p>
+</dd>
+<dt>Returns:</dt><dd><p>integral (float): The integral of the flux</p>
+</dd>
+<dt>Citation:</dt><dd><p>None</p>
+</dd>
+<dt>Implementor:</dt><dd><ol class="upperalpha simple" start="13">
+<li><p>Ross Kunz</p></li>
+</ol>
+</dd>
+<dt>Link:</dt><dd><p><a class="reference external" href="https://en.wikipedia.org/wiki/Trapezoidal_rule">https://en.wikipedia.org/wiki/Trapezoidal_rule</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="section" id="module-tapsap.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tapsap.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="tapsap.transient_analysis.html" class="btn btn-neutral float-left" title="tapsap.transient_analysis package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, M. Ross Kunz.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
