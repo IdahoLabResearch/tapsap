@@ -33,13 +33,13 @@ def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = 
         corrected_flux, calibration_amount (dict): The calibration corrected flux and the calibration amount. 
 
     Citation:
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
 
     Implementor:
         M. Ross Kunz
 
     Link:
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
     """
     
     if len(X.shape) == 1:

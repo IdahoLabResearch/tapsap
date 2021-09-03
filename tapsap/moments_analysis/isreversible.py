@@ -30,7 +30,7 @@ def isreversible(flux: ndarray, times: ndarray, inert_flux: ndarray, flux_mass: 
     Citation:
         Gleaves et al, "TAP-2: An interrogative kinetics approach"
 
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
 
     Implementor:
         M. Ross Kunz
@@ -43,7 +43,7 @@ def isreversible(flux: ndarray, times: ndarray, inert_flux: ndarray, flux_mass: 
     Link:
         https://doi.org/10.1016/S0926-860X(97)00124-5
         
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
     """
     # transform the inert
     inert_mod = diffusion.grahams_law(inert_flux, times, inert_mass, flux_mass)

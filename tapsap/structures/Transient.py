@@ -1,7 +1,6 @@
 # Transient
 # Copyright 2021, Battelle Energy Alliance, LLC All Rights Reserved
 
-from tapsap.utils.find_integration_time import find_integration_time
 import numpy as np
 import pandas as pd
 from tapsap import structures, moments_analysis, preprocess, transient_analysis, diffusion
@@ -323,7 +322,7 @@ class Transient():
         self.df_moments['baseline'] = self.df_moments['baseline'] - result['intercept']
 
 
-    def set_concentration(self, y_smoothing:float=None) -> None:
+    def set_concentration(self, y_smoothing:float=None, post_smoothing:bool=True) -> None:
         """
         A method calculates the gas concentration from the available flux.
         Note that by doing this method, the original flux will be overwritten.
@@ -333,10 +332,14 @@ class Transient():
         Args:
             y_smoothing (float): This value controls the amount of smoothing placed on the gas concentration when the Y-Procedure is used.  If None, then the G-Procedure is used.
 
+            post_smoothing (boolean): Smooth the concentration, placed in smoothed_flux, after calculating the concentration.
+
         See also:
             tapsap.transient_analysis.concentration_g
 
             tapsap.transient_analysis.concentration_y
+
+            tapsap.transient_analysis.smooth_flux_gam
 
         """
         pool = mp.Pool(self.num_cores)
@@ -353,7 +356,10 @@ class Transient():
         for i, result in enumerate(results):
             self.flux.iloc[:,i] = result * temp_units
 
-    def set_rate(self, y_smoothing:float=None, isreactant:bool = False) -> None:
+        if post_smoothing:
+            self.smooth_flux()
+
+    def set_rate(self, y_smoothing:float=None, isreactant:bool = False, post_smoothing:bool=True) -> None:
         """
         A method calculates the rate from the available flux.
         Note that by doing this method, the original flux will be overwritten.
@@ -365,10 +371,14 @@ class Transient():
 
             isreactant (bool): This controls whether the difference between the inert and the reactant is used when measuring the rate.
 
+            post_smoothing (boolean): Smooth the rate, placed in smoothed_flux, after calculating the rate.
+
         See also:
             tapsap.transient_analysis.rate_g
 
             tapsap.transient_analysis.rate_y
+
+            tapsap.transient_analysis.smooth_flux_gam
 
         """
         if isreactant:
@@ -394,6 +404,23 @@ class Transient():
         temp_units = transient_analysis.rate_units(self.reactor.mol_per_pulse, self.reactor.catalyst_weight)
         for i, result in enumerate(results):
             self.flux.iloc[:,i] = result * temp_units
+
+        if post_smoothing:
+            self.smooth_flux()
+
+
+    def set_accumulation(self) -> None:
+        """
+        This method applies a cumulative intergral to the flux (preferably the rate to get the accumulation).
+
+        """
+        for i in range(self.num_pulse):
+            self.flux.iloc[:,i] = np.cumsum(self.flux.iloc[:,i].values) * (self.times[1] - self.times[0])
+
+        if self.smoothed_flux is not None:
+            for i in range(self.num_pulse):
+                self.smoothed_flux.iloc[:,i] = np.cumsum(self.smoothed_flux.iloc[:,i].values) * (self.times[1] - self.times[0])
+
 
     def smooth_flux(self) -> None:
         """

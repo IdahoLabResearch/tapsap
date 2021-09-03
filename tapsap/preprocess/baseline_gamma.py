@@ -18,7 +18,7 @@ def baseline_gamma(flux: ndarray, times: ndarray) -> dict:
         corrected_flux, baseline_amount (dict): The baseline corrected flux and the baseline amount.
         
     Citation:
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
 
     Implementor:
         M. Ross Kunz
@@ -29,7 +29,7 @@ def baseline_gamma(flux: ndarray, times: ndarray) -> dict:
     Link:
         https://en.wikipedia.org/wiki/Gamma_distribution
 
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
     """
     original_flux = flux
     peak_index = flux.argmax()

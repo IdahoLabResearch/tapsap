@@ -20,12 +20,12 @@ def find_integration_time(flux: np.ndarray, times: np.ndarray, min_value: float 
         integration_time_range (list): A list contianing the start and end time to integrate the flux. If None, then set to the min and max time.
         
     Citation:
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
 
     Implementor:
         M. Ross Kunz
 
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
     """
     flux_max = np.argmax(flux)
     if flux_max < 30:

@@ -33,7 +33,7 @@ def calibration_teak(flux: ndarray, inert_flux: ndarray, times: ndarray, flux_ma
         [corrected_flux, calibration_amount] (dict): The calibration corrected flux and the calibration amount. 
 
     Citation:
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
 
     Implementor:
         M. Ross Kunz
@@ -44,7 +44,7 @@ def calibration_teak(flux: ndarray, inert_flux: ndarray, times: ndarray, flux_ma
         tapsap.moments.isreversible
 
     Link:
-        TODO TEAK
+        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
     """
     inert_area = utils.trapz(inert_flux, times)
     flux_area = utils.trapz(flux, times)

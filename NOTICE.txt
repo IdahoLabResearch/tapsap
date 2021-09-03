@@ -1,6 +1,6 @@
-﻿This project contains code from Idaho National Laboratory's TapSolver Project
-Github URL https://github.com/IdahoLabResearch/tapsap
-Licensed under GPL 2 License.
+This project contains code from Idaho National Laboratory's tapsap Project
+Github GitHub/IdahoLabResearch/tapsap
+Licensed under GPL-2.0 License.
 
 
 © 2021 Battelle Energy Alliance, LLC
@@ -32,4 +32,4 @@ OWNED RIGHTS.
 
 Authors:
 
-Ross Kunz
+Ross Kunz  ross.kunz@inl.gov
