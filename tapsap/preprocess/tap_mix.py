@@ -8,7 +8,7 @@ import copy
 from tapsap import preprocess, utils
 
 
-def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = False, constraints: bool = True, fit_intercept:bool = True) -> dict:
+def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = False, constraints: bool = True, fit_intercept:bool = True, enforce_max:bool = False) -> dict:
     """
 
     Optimization of the calibration coefficient or fragmentation.
@@ -29,6 +29,8 @@ def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = 
 
         fit_intercept (bool): Fit the intercept within the convex optimization.
 
+        enforce_max (bool): Enforce the maximum of the X values must be less than y.
+
     Returns:
         corrected_flux, calibration_amount (dict): The calibration corrected flux and the calibration amount. 
 
@@ -39,7 +41,7 @@ def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = 
         M. Ross Kunz
 
     Link:
-        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
+        https://arxiv.org/abs/2109.15042
     """
     
     if len(X.shape) == 1:
@@ -69,7 +71,8 @@ def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = 
     orig_X = copy.deepcopy(X)
 
     sum_y = y.sum()
-    m0_X = [sum(i) / sum_y for i in X.transpose()]
+    #m0_X = [sum(i) / sum_y for i in X.transpose()]
+    m0_X = [max(i) / max(y) for i in X.transpose()]
     m0_X = np.array([m0_X])
 
     warnings.filterwarnings("ignore", category=DeprecationWarning)
@@ -81,19 +84,33 @@ def tap_mix(X: np.ndarray, y: np.ndarray, times: np.ndarray, huber_loss: bool = 
         objective = cp.Minimize(cp.sum_squares(resids))  # resids
 
     if fit_intercept:
-        temp_constraints = [
-            beta_hat[1:p] >= 0,
-            #(np.sum(m0_X * beta_hat[1:p]) + cp.sum(resids) / sum_y) <= 1,
-            cp.sum(resids) * (times[1] - times[0]) >= 1e-5,
-            resids >= (orig_y.min() * 2)
-        ]
+        if enforce_max:
+            temp_constraints = [
+                beta_hat[1:p] >= 0,
+                np.sum(m0_X * beta_hat) <= 1,
+                cp.sum(resids) * (times[1] - times[0]) >= 1e-5,
+                resids >= (orig_y.min() * 2)
+            ]
+        else:
+            temp_constraints = [
+                beta_hat[1:p] >= 0,
+                cp.sum(resids) * (times[1] - times[0]) >= 1e-5,
+                resids >= (orig_y.min() * 2)
+            ]
     else:
-        temp_constraints = [
-            beta_hat >= 0,
-            #(np.sum(m0_X * beta_hat[1:p]) + cp.sum(resids) / sum_y) <= 1,
-            cp.sum(resids) * (times[1] - times[0]) >= 1e-5,
-            resids >= (orig_y.min() * 2)
-        ]
+        if enforce_max:
+            temp_constraints = [
+                beta_hat >= 0,
+                np.sum(m0_X * beta_hat) <= 1,
+                cp.sum(resids) * (times[1] - times[0]) >= 1e-5,
+                resids >= (orig_y.min() * 2)
+            ]
+        else:
+            temp_constraints = [
+                beta_hat >= 0,
+                cp.sum(resids) * (times[1] - times[0]) >= 1e-5,
+                resids >= (orig_y.min() * 2)
+            ]
         
     if constraints:
         warnings.filterwarnings("ignore", category=DeprecationWarning)

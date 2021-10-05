@@ -38,6 +38,7 @@ def postprocess_g(flux: np.ndarray, flux_argmax: int = None) -> np.ndarray:
     if len(negative_values) > 0:
         negative_max = max(negative_values)
         flux_tail = [flux[-1]] * (negative_max + 1)
+        #flux = np.array( [1e-10] + list(flux[(negative_max + 1):len(flux)]) + flux_tail[0:(len(flux_tail) - 1)])
         flux = np.array(list(flux[(negative_max + 1):len(flux)]) + flux_tail)
 
         # sub_times = times[1:(flux_argmax + 1)]

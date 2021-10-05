@@ -29,7 +29,7 @@ def tap_mix_opt(X: np.ndarray, y: np.ndarray) -> dict:
         M. Ross Kunz
 
     Link:
-        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
+        https://arxiv.org/abs/2109.15042
     """
     def fit_beta_hat(betaHat, y, X):
             betaHat = np.array([betaHat]).transpose()

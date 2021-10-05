@@ -29,7 +29,7 @@ def baseline_gamma(flux: ndarray, times: ndarray) -> dict:
     Link:
         https://en.wikipedia.org/wiki/Gamma_distribution
 
-        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
+        https://arxiv.org/abs/2109.15042
     """
     original_flux = flux
     peak_index = flux.argmax()

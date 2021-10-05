@@ -25,7 +25,8 @@ def find_integration_time(flux: np.ndarray, times: np.ndarray, min_value: float 
     Implementor:
         M. Ross Kunz
 
-        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
+    Link:
+        https://arxiv.org/abs/2109.15042
     """
     flux_max = np.argmax(flux)
     if flux_max < 30:

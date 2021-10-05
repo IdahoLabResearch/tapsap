@@ -44,7 +44,7 @@ def calibration_teak(flux: ndarray, inert_flux: ndarray, times: ndarray, flux_ma
         tapsap.moments.isreversible
 
     Link:
-        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
+        https://arxiv.org/abs/2109.15042
     """
     inert_area = utils.trapz(inert_flux, times)
     flux_area = utils.trapz(flux, times)

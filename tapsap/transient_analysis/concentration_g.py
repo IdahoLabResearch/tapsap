@@ -53,6 +53,9 @@ def concentration_g(flux: np.ndarray, times: np.ndarray, zone_lengths: dict) -> 
     time_multiplier = np.array([0] + list(temp_time_multiplier))
     concentration = flux * time_multiplier
     concentration = transient_analysis.postprocess_g(concentration, flux.argmax())
+    print(min(flux))
+    print(min(concentration))
+    print('******************')
 
     # Calculate the area
     concentration_area = utils.trapz(concentration, times)

@@ -4,7 +4,8 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
   <title>tapsap.structures package &mdash; tapsap 1.0 documentation</title>
@@ -185,12 +186,12 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tapsap-structures-package">
+  <section id="tapsap-structures-package">
 <h1>tapsap.structures package<a class="headerlink" href="#tapsap-structures-package" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="submodules">
+<section id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-tapsap.structures.Experiment">
+</section>
+<section id="module-tapsap.structures.Experiment">
 <span id="tapsap-structures-experiment-module"></span><h2>tapsap.structures.Experiment module<a class="headerlink" href="#module-tapsap.structures.Experiment" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment">
@@ -211,11 +212,12 @@ It mainly acts as a container for all of the species data / methods as well as a
 </dl>
 <dl class="py method">
 <dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment.calibrate_all_species">
-<span class="sig-name descname"><span class="pre">calibrate_all_species</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inert</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.calibrate_all_species" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calibrate_all_species</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inert</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.calibrate_all_species" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method calibrates all other flux to the inert species.</p>
 <dl>
 <dt>Args:</dt><dd><p>inert (str): The name of the inert species as found in the species_data keys.  If none, then will use species_class contained in the experiment.</p>
 <p>reference_index (optional int): The index in which to calibrate the inert values.  Be sure to examine prior to application in case of outgassing.</p>
+<p>enforce_max (bool): Enforce the maximum of the X values must be less than y.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -233,7 +235,7 @@ It mainly acts as a container for all of the species data / methods as well as a
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tapsap.structures.Experiment.Experiment.rate_reactivity_data">
-<span class="sig-name descname"><span class="pre">rate_reactivity_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inert</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reactants</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">products</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibrate_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.rate_reactivity_data" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">rate_reactivity_data</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">inert</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reactants</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">products</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">calibrate_data</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">int</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">10</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Experiment.Experiment.rate_reactivity_data" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method calculates the rate, concentration, and the accumulation for each different species.</p>
 <dl>
 <dt>Args:</dt><dd><p>inert (str): The name of the inert species as found in the species_data keys.  If none, then will use species_class contained in the experiment.</p>
@@ -241,6 +243,7 @@ It mainly acts as a container for all of the species data / methods as well as a
 <p>products (ndarray or str): The name(s) of the product species.  If none, then will use species_class contained in the experiment.</p>
 <p>calibrate_data (bool): To calibrate the data prior to measuring the rate_reactivity_data.</p>
 <p>reference_index (optional int): The index in which to calibrate the inert values.  Be sure to examine prior to application in case of outgassing.</p>
+<p>enforce_max (bool): Enforce the maximum of the X values must be less than y.</p>
 </dd>
 </dl>
 </dd></dl>
@@ -259,8 +262,8 @@ It mainly acts as a container for all of the species data / methods as well as a
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-tapsap.structures.Reactor">
+</section>
+<section id="module-tapsap.structures.Reactor">
 <span id="tapsap-structures-reactor-module"></span><h2>tapsap.structures.Reactor module<a class="headerlink" href="#module-tapsap.structures.Reactor" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tapsap.structures.Reactor.Reactor">
@@ -279,8 +282,8 @@ It mainly acts as a container for all of the species data / methods as well as a
 </dl>
 </dd></dl>
 
-</div>
-<div class="section" id="module-tapsap.structures.Transient">
+</section>
+<section id="module-tapsap.structures.Transient">
 <span id="tapsap-structures-transient-module"></span><h2>tapsap.structures.Transient module<a class="headerlink" href="#module-tapsap.structures.Transient" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="tapsap.structures.Transient.Transient">
@@ -324,7 +327,7 @@ If baseline_time_range and baseline_amount is None, then the baseline_gamma will
 
 <dl class="py method">
 <dt class="sig sig-object py" id="tapsap.structures.Transient.Transient.calibrate_flux">
-<span class="sig-name descname"><span class="pre">calibrate_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">huber_loss</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.calibrate_flux" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">calibrate_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">calibration_amount</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">reference_index</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><span class="pre">numpy.ndarray</span><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">smooth_flux</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">huber_loss</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">constraints</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fit_intercept</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">True</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">enforce_max</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">bool</span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span> &#x2192; <span class="pre">None</span><a class="headerlink" href="#tapsap.structures.Transient.Transient.calibrate_flux" title="Permalink to this definition">¶</a></dt>
 <dd><p>A method for applying a calibration coefficient to the flux (multiplied).
 This method has the option to do traditional calibration via a calibration amount or if None, then will perform transient calibration.
 When the reference_index is not None, then this will loop over all flux and calibrate to a specific flux. 
@@ -335,6 +338,8 @@ The reference flux is usefull when accounting for drift in the inert flux.</p>
 <p>smooth_flux (bool): Smoothing the flux prior to optimization.</p>
 <p>huber_loss (bool): Use a robust loss function rather than the standard square error loss.</p>
 <p>constraints (bool): This controls whether contrained regression is performed.</p>
+<p>fit_intercept (bool): Fit the intercept within the convex optimization.</p>
+<p>enforce_max (bool): Enforce the maximum of the X values must be less than y.</p>
 </dd>
 <dt>See also:</dt><dd><p>tapsap.preprocess.calibration_coef</p>
 <p>tapsap.preprocess.tap_mix</p>
@@ -467,11 +472,11 @@ This requires calculating the moments.</p>
 
 </dd></dl>
 
-</div>
-<div class="section" id="module-tapsap.structures">
+</section>
+<section id="module-tapsap.structures">
 <span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-tapsap.structures" title="Permalink to this headline">¶</a></h2>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

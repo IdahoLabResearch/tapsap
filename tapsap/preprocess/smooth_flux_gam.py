@@ -30,7 +30,7 @@ def smooth_flux_gam(flux: np.ndarray, smooth_amount = 1e-4) -> np.ndarray:
     Link:
         https://doi.org/10.1214/ss/1177013604
 
-        Kunz et al, "A Priori Calibration of Transient Kinetics Data via Machine Learning" (In prep)
+        https://arxiv.org/abs/2109.15042
     """
     temp_index = np.arange(0, len(flux))
     smoothed_flux = csaps(temp_index, flux, temp_index, smooth = smooth_amount)

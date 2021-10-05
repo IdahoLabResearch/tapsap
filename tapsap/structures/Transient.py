@@ -55,6 +55,7 @@ class Transient():
         self.flux = None
         self.smoothed_flux = None
         self.times = None
+        self.smoothing_parameter = 1e-4
         # if surface species, then diffusion = 0
         self.diffusion = 0.5
         self.amount_pulsed = 1
@@ -234,7 +235,7 @@ class Transient():
 
         self.df_moments['baseline'] = self.df_moments['baseline'] + temp_baseline
 
-    def calibrate_flux(self, calibration_amount: float = None, reference_index:np.ndarray=None, smooth_flux: bool = True, huber_loss: bool = False, constraints:bool = True) -> None:
+    def calibrate_flux(self, calibration_amount: float = None, reference_index:np.ndarray=None, smooth_flux: bool = True, huber_loss: bool = False, constraints:bool = True, fit_intercept:bool = True, enforce_max:bool = False) -> None:
         """
         A method for applying a calibration coefficient to the flux (multiplied).
         This method has the option to do traditional calibration via a calibration amount or if None, then will perform transient calibration.
@@ -251,6 +252,10 @@ class Transient():
             huber_loss (bool): Use a robust loss function rather than the standard square error loss.
 
             constraints (bool): This controls whether contrained regression is performed.
+
+            fit_intercept (bool): Fit the intercept within the convex optimization.
+
+            enforce_max (bool): Enforce the maximum of the X values must be less than y.
 
         See also:
             tapsap.preprocess.calibration_coef
@@ -279,9 +284,9 @@ class Transient():
             smooth_flux = False
         elif reference_index is not None:
             if smooth_flux:
-                temp_args = [(self.smoothed_flux.iloc[:,i].values, self.smoothed_flux.iloc[:, reference_index].values, self.times, huber_loss, constraints) for i in range(self.num_pulse)]
+                temp_args = [(self.smoothed_flux.iloc[:,i].values, self.smoothed_flux.iloc[:, reference_index].values, self.times, huber_loss, constraints, fit_intercept, enforce_max) for i in range(self.num_pulse)]
             else:
-                temp_args = [(self.flux.iloc[:,i].values, self.flux.iloc[:, reference_index].values, self.times, huber_loss, constraints) for i in range(self.num_pulse)]
+                temp_args = [(self.flux.iloc[:,i].values, self.flux.iloc[:, reference_index].values, self.times, huber_loss, constraints, fit_intercept, enforce_max) for i in range(self.num_pulse)]
             pool = mp.Pool(self.num_cores)
             results = pool.starmap(preprocess.tap_mix, temp_args)
             pool.close()
@@ -291,9 +296,9 @@ class Transient():
                 if not isinstance(self.smoothed_flux, pd.DataFrame):
                     self.reference_gas.smooth_flux()
 
-                temp_args = [(self.smoothed_flux.iloc[:,i].values, self.reference_gas.smoothed_flux.iloc[:,i].values, self.times, huber_loss, constraints) for i in range(self.num_pulse)]
+                temp_args = [(self.smoothed_flux.iloc[:,i].values, self.reference_gas.smoothed_flux.iloc[:,i].values, self.times, huber_loss, constraints, fit_intercept, enforce_max) for i in range(self.num_pulse)]
             else:
-                temp_args = [(self.flux.iloc[:,i].values, self.reference_gas.flux.iloc[:,i].values, self.times, huber_loss, constraints) for i in range(self.num_pulse)]
+                temp_args = [(self.flux.iloc[:,i].values, self.reference_gas.flux.iloc[:,i].values, self.times, huber_loss, constraints, fit_intercept, enforce_max) for i in range(self.num_pulse)]
             pool = mp.Pool(self.num_cores)
             results = pool.starmap(preprocess.tap_mix, temp_args)
             pool.close()
@@ -432,8 +437,8 @@ class Transient():
         """
         self.smoothed_flux = copy.deepcopy(self.flux)
         pool = mp.Pool(self.num_cores)
-        temp_args = [self.smoothed_flux.iloc[:,i].values for i in range(self.num_pulse)]
-        results = pool.map(preprocess.smooth_flux_gam, temp_args)
+        temp_args = [(self.smoothed_flux.iloc[:,i].values, self.smoothing_parameter) for i in range(self.num_pulse)]
+        results = pool.starmap(preprocess.smooth_flux_gam, temp_args)
         pool.close()
         pool.join()
         

@@ -71,7 +71,7 @@ class Experiment():
         self.species_data[new_species_name] = current_species
 
 
-    def calibrate_all_species(self, inert:str = None, reference_index = 10) -> None:
+    def calibrate_all_species(self, inert:str = None, reference_index = 10, enforce_max:bool = False) -> None:
         """
         This method calibrates all other flux to the inert species.
 
@@ -79,6 +79,8 @@ class Experiment():
             inert (str): The name of the inert species as found in the species_data keys.  If none, then will use species_class contained in the experiment.
 
             reference_index (optional int): The index in which to calibrate the inert values.  Be sure to examine prior to application in case of outgassing.
+
+            enforce_max (bool): Enforce the maximum of the X values must be less than y.
         """
         if inert is not None:
             self.species_class['inert'] = inert
@@ -92,24 +94,27 @@ class Experiment():
         except ValueError:
             print("Please enter a valid inert from the species data keys, i.e., experiment.species_data.keys()")
 
-        self.species_data[inert_species].baseline_correct()
-        self.species_data[inert_species].calibrate_flux(reference_index = reference_index)
+
 
         all_other_species = [i for i in list(self.species_data.keys()) if i is not inert_species]
         for i in all_other_species:
             current_mass = self.species_data[i].mass
             current_name = self.species_data[i].name.replace('AMU', '')
-            inert_name = 'inert_' + current_name
+            inert_name = 'inert' + current_name
             self.make_copy(inert_species, inert_name)
-            # baseline correction and calibration
             self.species_data[inert_name].grahams_law(current_mass)
+            self.species_data[inert_name].baseline_correct()
+            self.species_data[inert_name].calibrate_flux(reference_index = reference_index)
+
+            # baseline correction and calibration
+            
             self.species_data[i].reference_gas = self.species_data[inert_name]
             self.species_data[i].baseline_correct()
-            self.species_data[i].calibrate_flux(huber_loss = True)
+            self.species_data[i].calibrate_flux(enforce_max = enforce_max)
             self.species_data[i].set_moments()
 
 
-    def rate_reactivity_data(self, inert:str = None, reactants:np.ndarray = None, products:np.ndarray = None, calibrate_data:bool = True, reference_index:int = 10) -> None:
+    def rate_reactivity_data(self, inert:str = None, reactants:np.ndarray = None, products:np.ndarray = None, calibrate_data:bool = True, reference_index:int = 10, enforce_max:bool = False) -> None:
         """
         This method calculates the rate, concentration, and the accumulation for each different species.
 
@@ -123,6 +128,8 @@ class Experiment():
             calibrate_data (bool): To calibrate the data prior to measuring the rate_reactivity_data.
 
             reference_index (optional int): The index in which to calibrate the inert values.  Be sure to examine prior to application in case of outgassing.
+
+            enforce_max (bool): Enforce the maximum of the X values must be less than y.
         """
 
         if inert is not None:
@@ -163,22 +170,22 @@ class Experiment():
                     print("Please enter a valid product from the species data keys, i.e., experiment.species_data.keys()")
 
         if calibrate_data:
-            self.calibrate_all_species(inert_species, reference_index = reference_index)
+            self.calibrate_all_species(inert_species, reference_index = reference_index, enforce_max = enforce_max)
 
         for i in reactant_species:
             current_name = self.species_data[i].name.replace('AMU', '')
             # measure the concentration
-            concentration_name = 'concentration_' + current_name
+            concentration_name = 'concentration' + current_name
             self.make_copy(i, concentration_name)
             self.species_data[concentration_name].set_concentration()
             self.species_data[concentration_name].set_moments()
             # measure the rate
-            rate_name = 'rate_' + current_name
+            rate_name = 'rate' + current_name
             self.make_copy(i, rate_name)
             self.species_data[rate_name].set_rate(isreactant = True)
             self.species_data[rate_name].set_moments()
             # measure the accumulation
-            accumulation_name = 'accumulation_' + current_name
+            accumulation_name = 'accumulation' + current_name
             self.make_copy(rate_name, accumulation_name)
             self.species_data[accumulation_name].set_accumulation()
             self.species_data[accumulation_name].set_moments()
@@ -187,17 +194,17 @@ class Experiment():
             for i in product_species:
                 current_name = self.species_data[i].name.replace('AMU', '')
                 # measure the concentration
-                concentration_name = 'concentration_' + current_name
+                concentration_name = 'concentration' + current_name
                 self.make_copy(i, concentration_name)
                 self.species_data[concentration_name].set_concentration()
                 self.species_data[concentration_name].set_moments()
                 # measure the rate
-                rate_name = 'rate_' + current_name
+                rate_name = 'rate' + current_name
                 self.make_copy(i, rate_name)
                 self.species_data[rate_name].set_rate()
                 self.species_data[rate_name].set_moments()
                 # measure the accumulation
-                accumulation_name = 'accumulation_' + current_name
+                accumulation_name = 'accumulation' + current_name
                 self.make_copy(rate_name, accumulation_name)
                 self.species_data[accumulation_name].set_accumulation()
                 self.species_data[accumulation_name].set_moments()
