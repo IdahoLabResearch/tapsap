@@ -2,7 +2,6 @@
 # Copyright 2021, Battelle Energy Alliance, LLC All Rights Reserved
 
 from numpy import ndarray
-from numpy import trapz as nptrapz
 
 
 def trapz(flux: ndarray, times: ndarray) -> float:
@@ -30,15 +29,13 @@ def trapz(flux: ndarray, times: ndarray) -> float:
         https://en.wikipedia.org/wiki/Trapezoidal_rule
 
     """
-
-    integral = nptrapz(flux, times)
-    #diff_1 = times[1] - times[0]
-    #diff_2 = times[2] - times[1]
-    #if diff_1 == diff_2:
-    #    integral = sum(flux) * diff_1
-    #else:
-    #    flux_len = len(flux)
-    #    integral = 0.5 * sum((times[1:flux_len] - times[0:(flux_len - 1)])
-    #                         * (flux[1:flux_len] + flux[0:(flux_len - 1)]))
+    diff_1 = times[1] - times[0]
+    diff_2 = times[2] - times[1]
+    if diff_1 == diff_2:
+        integral = sum(flux) * diff_1
+    else:
+        flux_len = len(flux)
+        integral = 0.5 * sum((times[1:flux_len] - times[0:(flux_len - 1)])
+                             * (flux[1:flux_len] + flux[0:(flux_len - 1)]))
 
     return integral

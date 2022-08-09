@@ -1,0 +1,11 @@
+numpy
+pygam
+csaps
+cvxpy
+pandas
+nptdms
+scipy
+openpyxl
+plotly
+kaleido
+multiprocess

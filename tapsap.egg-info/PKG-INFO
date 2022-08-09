@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: tapsap
+Version: 0.0.1
+Summary: Temporal analysis of products statistical analysis package
+Author: M. Ross Kunz
+Author-email: <ross.kunz@inl.gov>
+License: UNKNOWN
+Keywords: TAP,Temporal Analysis of Products,tapsap
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+License-File: LICENSE
+License-File: NOTICE.txt
+
+A collection of methods for analyzing Temporal Analysis of Products (TAP) reactor data.
+
