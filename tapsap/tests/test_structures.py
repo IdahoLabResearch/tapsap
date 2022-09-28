@@ -11,7 +11,7 @@ class TestStructures(unittest.TestCase):
         self.experiment = tapsap.read_tdms(io.BytesIO(stream))
         self.min_value = -0.071
         self.M1_value = -0.34
-        self.mean_residence_time = -1.328
+        self.mean_residence_time = -1.327
         self.baseline_amount = -0.05
         self.calibration_amount = 0.25
         self.calibration_amount_sequential = 0.859

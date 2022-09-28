@@ -25,7 +25,7 @@ def rate_y(flux: np.ndarray, times: np.ndarray, diffusion: float, zone_lengths: 
         zone_porosity (dict): The assumed bed porosity within the catalyst.
 
     Returns:
-        concentration (float ndarray): The gas concentration of the given flux.
+        rate (float ndarray): The gas rate (temporal) of the given flux.
 
     Citation:
         Yablonsky et al, "The Y-procedure: How to extract the chemical transformation rate from reaction–diffusion data with no assumption on the kinetic model"

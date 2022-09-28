@@ -60,6 +60,14 @@ tapsap.transient\_analysis.rate\_y module
    :undoc-members:
    :show-inheritance:
 
+tapsap.transient\_analysis.uptake module
+----------------------------------------
+
+.. automodule:: tapsap.transient_analysis.uptake
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 Module contents
 ---------------
 

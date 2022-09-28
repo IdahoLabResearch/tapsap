@@ -6,7 +6,9 @@ import numpy as np
 def rate_units(mol_per_pulse:float = 1, catalyst_weight:float = 1) -> float:
     """
 
-    Calculation of the concentration via the G-Procedure. 
+    Calculation of the rate units: mol / catalyst weight. 
+    This results in the concentration returned as mol/m2/s. 
+    Note: the units in meters is dependent on the user input catalyst weight units.
     
     Args:
         mol_per_pulse (float): The mol per injection.

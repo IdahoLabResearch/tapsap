@@ -5,3 +5,4 @@ from .rate_g import rate_g
 from .postprocess_g import postprocess_g
 from .concentration_y import concentration_y
 from .rate_y import rate_y
+from .uptake import uptake

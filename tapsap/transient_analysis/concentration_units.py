@@ -6,7 +6,10 @@ import numpy as np
 def concentration_units(gas_diffusion:float, zone_lengths:dict, reactor_radius:float, mol_per_pulse:float = 1) -> float:
     """
 
-    Calculation of the concentration via the G-Procedure. 
+    Calculation of the concentration units: (mol per pulse * catalyst zone length) / (gas diffusion * cross sectional area). 
+    This results in the concentration returned as mol/m3. 
+    Note: the units in meters is dependent on the user input of the diffusion coefficient and zone length units.
+    For example, if the length units are given as cm, then the resulting concentration will be given as mol / cm3. 
     
     Args:
         gas_diffusion (float): The diffusion coefficient of the gas.
